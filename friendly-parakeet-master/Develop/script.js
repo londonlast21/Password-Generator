@@ -9,9 +9,39 @@
 //password is printed on screen
 
 //with each prompt entry user entry is validated and at least one char type is selecte
+ function generatePassword() {
+   //ask for length when button clicked
+  var length = Number(prompt("Please enter number of characters, from 8 to 128."));
+  //ask for character type
+  var charType = prompt("Enter a character type: special, numeric, lower case, or upper case.");
+  //generate the password from user input
+    var characters = "";
+    var charTypeEntry = charType.toLowerCase();
+    if (charTypeEntry === "lower case") {
 
-var length = prompt("Please choose number of characters, between 8 and 128.");
-var special = prompt("Please choose special characters to include. Enter LOWER CASE, UPPER CASE, NUMERIC, and/or SPECIAL.")
+      characters = "abcdefghijklmnopqrstuvwxyz";
+
+    } else if(charTypeEntry === "upper case") {
+      characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    } else if(chareTypeEntry === "numeric") {
+      characters = "0123456789";
+    }else if(charTypeEntry === "special") {
+      characters = "!@#$%^&*()";
+    }
+    //return value
+    var returnValue = "";
+    for (var i = 0; i < length; i++) {
+      //picks a character set within the charType index
+      returnValue += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return returnValue;
+
+    
+    }
+
+  
+
+
 
 
 // Get references to the #generate element
