@@ -11,7 +11,7 @@
 //with each prompt entry user entry is validated and at least one char type is selecte
 
 var length = prompt("Please choose number of characters, between 8 and 128.");
-
+var special = prompt("Please choose special characters to include. Enter LOWER CASE, UPPER CASE, NUMERIC, and/or SPECIAL.")
 
 
 // Get references to the #generate element
