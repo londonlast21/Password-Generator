@@ -23,9 +23,9 @@
 
     } else if(charTypeEntry === "upper case") {
       characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    } else if(chareTypeEntry === "numeric") {
+    } else if(charTypeEntry === "numeric") {
       characters = "0123456789";
-    }else if(charTypeEntry === "special") {
+    }else if (charTypeEntry === "special") {
       characters = "!@#$%^&*()";
     }
     //return value
@@ -37,9 +37,10 @@
     return returnValue;
 
     
+    
     }
 
-  
+
 
 
 
