@@ -12,8 +12,7 @@
  function generatePassword() {
    //ask for length when button clicked
   var length = Number(prompt("Please enter number of characters, from 8 to 128."));
-    
-
+  //user validation
 
 
   //ask for character type
@@ -21,27 +20,27 @@
   //generate the password from user input
     var characters = "";
     var charTypeEntry = charType.toLowerCase();
-    if (charTypeEntry === "lower case" || charTypeEntry === "LOWER CASE") {
+    if (charTypeEntry === "lower case") {
 
       characters = "abcdefghijklmnopqrstuvwxyz";
 
-    } else if(charTypeEntry === "upper case" || charTypeEntry === "UPPER CASE") {
+    } else if(charTypeEntry === "upper case") {
       characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    } else if(charTypeEntry === "numeric" || charTypeEntry === "NUMERIC") {
+    } else if(charTypeEntry === "numeric") {
       characters = "0123456789";
-    } else if (charTypeEntry === "special" || charTypeEntry === "SPECIAL") {
+    } else if (charTypeEntry === "special") {
       characters = "!@#$%^&*()";
-    } else if (charTypeEntry === "special and upper case" || charTypeEntry === "SPECIAL AND UPPER CASE" || charTypeEntry === "upper case and special" || charTypeEntry === "UPPER CASE AND SPECIAL") {
+    } else if (charTypeEntry === "special and upper case" || charTypeEntry === "upper case and special") {
       characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()";
-    } else if (charTypeEntry === "numeric and upper case" || charTypeEntry === "NUMERIC AND UPPER CASE" || charTypeEntry === "upper case and numeric" || charTypeEntry === "UPPER CASE AND NUMERIC") {
+    } else if (charTypeEntry === "numeric and upper case" || charTypeEntry === "upper case and numeric") {
       characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    } else if (charTypeEntry === "special and lower case" || charTypeEntry === "SPECIAL AND LOWER CASE" || charTypeEntry === "lower case and special" || charTypeEntry === "LOWER CASE AND SPECIAL") {
+    } else if (charTypeEntry === "special and lower case" || charTypeEntry === "lower case and special") {
       characters = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()";
-    } else if (charTypeEntry === "numeric and lower case" || charTypeEntry === "NUMERIC AND LOWER CASE" || charTypeEntry === "lower case and numeric" || charTypeEntry === "LOWER CASE AND NUMERIC") {
+    } else if (charTypeEntry === "numeric and lower case" || charTypeEntry === "lower case and numeric") {
       characters = "0123456789abcdefghijklmnopqrstuvwxyz";
-    } else if (charTypeEntry === "upper case and lower case" || charTypeEntry === "UPPER CASE AND LOWER CASE" || charTypeEntry === "lower case and upper case" || charTypeEntry === "LOWER CASE AND UPPER CASE") {
+    } else if (charTypeEntry === "upper case and lower case" || charTypeEntry === "lower case and upper case") {
       characters = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqqrRsStTuUvVwWxXyYzZ";
-    } else if (charTypeEntry === "numeric and special" || charTypeEntry === "NUMERIC AND SPECIAL" || charTypeEntry === "special and numeric" || charTypeEntry === "SPECIAL AND NUMERIC") {
+    } else if (charTypeEntry === "numeric and special" || charTypeEntry === "special and numeric") {
       characters = "0123456789!@#$%^&*()";
     }
     //up to here works
@@ -67,7 +66,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  //var password = generatePassword();
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
