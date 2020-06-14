@@ -61,10 +61,16 @@ function generatePassword() {
     charSetSelected = true;
 
   }
+  //user validation while boolean TRUE
+   while (charSetSelected){
+     alert("Generating your password.");
+     break;
+   }
 
-  // while (!charSetSelected){
-  //   //charType = prompt("Invalid Entry! Enter a character type: 'special', 'numeric', 'lower case', or 'upper case'. If choosing two, use the word 'and' and include entire term .")
-  // }
+   //user validation while boolean false
+  //  while (!charSetSelected){
+  //    charType = prompt("Invalid Entry! Enter a character type: 'special', 'numeric', 'lower case', or 'upper case'. If choosing two, use the word 'and' and include entire term .");
+  //  }
 
 
 
