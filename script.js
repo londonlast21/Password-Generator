@@ -23,11 +23,11 @@ function generatePassword() {
   
   //user validation
    window.alert("You have chosen " + length + " characters.");
-  
-  
+
 
 
   //ask for character type
+  
   var charType = prompt("Enter a character type: 'special', 'numeric', 'lower case', or 'upper case'. If choosing two, use the word 'and' and include entire term .");
 
   //generate the password from user input
@@ -35,43 +35,46 @@ function generatePassword() {
   var charTypeEntry = charType.toLowerCase();
   console.log("CHAR TYPES SELECTED STRING: ", charTypeEntry)
 
-  let charSetSelected = false
+  let charSetSelected = true
 
   if (charTypeEntry.includes("lower case")) {
 
     characters = characters + "abcdefghijklmnopqrstuvwxyz";
-    charSetSelected = true;
+    charSetSelected = false;
   }
 
   if (charTypeEntry.includes("upper case")) {
     characters = characters + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    charSetSelected = true;
+    charSetSelected = false;
   }
 
   if (charTypeEntry.includes("numeric")) {
 
     characters = characters + "0123456789";
-    charSetSelected = true;
+    charSetSelected = false;
 
   }
 
   if (charTypeEntry.includes("special")) {
 
     characters = characters + "!@#$%^&*()";
-    charSetSelected = true;
+    charSetSelected = false;
 
   }
-  //user validation while boolean TRUE
-   while (charSetSelected){
-     alert("Generating your password.");
-     break;
-   }
+
+  while (!charSetSelected) {
+    charType = alert("Generating your password");
+    break;
+  }
+  
+  while (charSetSelected) {
+  charType = prompt("Invalid Entry! Enter a character type: 'special', 'numeric', 'lower case', or 'upper case'. If choosing two, use the word 'and' and include entire term .");
+  //break; 
+  }
+   
 
    //user validation while boolean false
-  //  while (!charSetSelected){
-  //    charType = prompt("Invalid Entry! Enter a character type: 'special', 'numeric', 'lower case', or 'upper case'. If choosing two, use the word 'and' and include entire term .");
-  //  }
-
+  
 
 
 
