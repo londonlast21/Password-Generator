@@ -13,22 +13,18 @@
 function generatePassword() {
   //ask for length when button clicked
 
-//  // var length = Number(prompt("Please enter number of characters, from 8 to 128."));
+   var length = Number(prompt("Please enter number of characters, from 8 to 128."));
 
-//   while (isNaN(length) || length < 8 || length > 128 || length === "" || length === null) {
+   while (isNaN(length) || length < 8 || length > 128 || length === "" || length === null) {
 
-//     length = Number(prompt("Invalid entry. Please enter number from 8 to 128."));
+     length = Number(prompt("Invalid entry. Please enter number from 8 to 128."));
 
-//   }
+   }
   
-  
-//   window.alert("You have chosen " + length + " characters.");
-  
-  
-
-
-
   //user validation
+   window.alert("You have chosen " + length + " characters.");
+  
+  
 
 
   //ask for character type
