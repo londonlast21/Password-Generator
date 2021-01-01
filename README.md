@@ -10,4 +10,4 @@ Click on the 'Generate' button.  You will be prompted with options to choose the
 
 ## Link:
 
-[Password Generator](https://londonlast21.github.io/password/)
+[Password Generator](https://londonlast21.github.io/Password-Generator/)
